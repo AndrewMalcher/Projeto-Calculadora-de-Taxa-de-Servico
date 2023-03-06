@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Calculadora de Taxa de serviço</title>
+</head>
+
+<body>
+<div id="conteiner">
+        <div class="title">
+            <h1>  Calculadora de Taxa de Serviço</h1>
+        </div>
+
+
+        <form class="form" id="form">
+            <p>
+                <label for="bill">Quanto ficou a conta?</label>
+            </p>
+            <p>
+                R$ <input class="answer" type="number" name="bill" id="valor">
+            </p>
+
+            <p>
+                <label for="servicequal">Como foi o serviço prestado?</label>
+            </p>
+
+            <p>
+                <select class="answer" name="servicequal" id="servicequal">
+                    <option disable value="0"> -- ESCOLHA UMA OPÇÃO ABAIXO -- </option>
+                    <option value="0.15"> 15% -- Ótimo! </option>
+                    <option value="0.1"> 10% -- Bom </option>
+                    <option value="0.05"> 5% -- Normal </option>
+                    <option value="0.01"> 1% -- Desagradável </option>
+                </select>
+            </p>
+
+            <p>
+                <label for="qtd">Quantas pessoas vão dividir a conta?</label>
+            </p>
+            <p>
+                <input class="answer" type="number" name="qtd" id="qtd" placeholder="1"> Pessoa(s)
+            </p>
+
+            <p>
+                <button type="submit" id="submit">CALCULAR!</button>
+            </p>
+        </form>
+       <div id="totaltip">
+        Taxa de serviço de:
+        R$<span id="tip">0.00</span>
+        <span id="each">para cada um.</span>
+       </div> 
+</div>
+<script type="text/javascript" src="script.js"></script>
+</body>
+
+</html>
