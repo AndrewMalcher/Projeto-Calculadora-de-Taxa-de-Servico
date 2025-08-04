@@ -1,61 +1,94 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Calculadora de Taxa de serviço</title>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+  <link rel="stylesheet" href="style.css" />
+  <title>Calculadora de Taxa de Serviço</title>
 </head>
-
 <body>
-<div id="conteiner">
-        <div class="title">
-            <h1>  Calculadora de Taxa de Serviço</h1>
-        </div>
+  <div id="container">
+    <header class="title">
+      <h1>Calculadora de Taxa de Serviço</h1>
+    </header>
 
+    <form id="form" class="form">
+      <p>
+        <label for="valor">Quanto ficou a conta?</label><br />
+        R$
+        <input
+          id="valor"
+          class="answer"
+          type="number"
+          min="0"
+          step="0.01"
+          placeholder="0,00"
+        />
+      </p>
 
-        <form class="form" id="form">
-            <p>
-                <label for="bill">Quanto ficou a conta?</label>
-            </p>
-            <p>
-                R$ <input class="answer" type="number" name="bill" id="valor">
-            </p>
+      <p>
+        <label for="servicequal"
+          >Como foi o serviço prestado?</label
+        ><br />
+        <select id="servicequal" class="answer">
+          <option disabled selected value="0">
+            -- ESCOLHA UMA OPÇÃO ABAIXO --
+          </option>
+          <option value="0.15">15% — Ótimo!</option>
+          <option value="0.1">10% — Bom</option>
+          <option value="0.05">5% — Normal</option>
+          <option value="0.01">1% — Desagradável</option>
+        </select>
+      </p>
 
-            <p>
-                <label for="servicequal">Como foi o serviço prestado?</label>
-            </p>
+      <p>
+        <label for="qtd"
+          >Quantas pessoas vão dividir a conta?</label
+        ><br />
+        <input
+          id="qtd"
+          class="answer"
+          type="number"
+          min="1"
+          step="1"
+          placeholder="1"
+        />
+        pessoa(s)
+      </p>
 
-            <p>
-                <select class="answer" name="servicequal" id="servicequal">
-                    <option disable value="0"> -- ESCOLHA UMA OPÇÃO ABAIXO -- </option>
-                    <option value="0.15"> 15% -- Ótimo! </option>
-                    <option value="0.1"> 10% -- Bom </option>
-                    <option value="0.05"> 5% -- Normal </option>
-                    <option value="0.01"> 1% -- Desagradável </option>
-                </select>
-            </p>
+      <p>
+        <button id="submit" type="submit">
+          CALCULAR!
+        </button>
+      </p>
+    </form>
 
-            <p>
-                <label for="qtd">Quantas pessoas vão dividir a conta?</label>
-            </p>
-            <p>
-                <input class="answer" type="number" name="qtd" id="qtd" placeholder="1"> Pessoa(s)
-            </p>
+    <!-- Tip por pessoa -->
+    <div id="totaltip">
+      Taxa de serviço de:
+      <strong><span id="tip">R$ 0,00</span></strong>
+      <span id="eachTip"> para cada um.</span>
+    </div>
 
-            <p>
-                <button type="submit" id="submit">CALCULAR!</button>
-            </p>
-        </form>
-       <div id="totaltip">
-        Taxa de serviço de:
-        R$<span id="tip">0.00</span>
-        <span id="each">para cada um.</span>
-       </div> 
-</div>
-<script type="text/javascript" src="script.js"></script>
+    <!-- Conta por pessoa sem taxa -->
+    <div id="totalbill">
+      Valor da conta por pessoa:
+      <strong><span id="billpp">R$ 0,00</span></strong>
+      <span id="eachBill"> para cada um.</span>
+    </div>
+
+    <!-- Total por pessoa com taxa -->
+    <div id="totalwithtip">
+      Total por pessoa (conta + taxa):
+      <strong><span id="totalpp">R$ 0,00</span></strong>
+      <span id="eachTotal"> para cada um.</span>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
-
 </html>
