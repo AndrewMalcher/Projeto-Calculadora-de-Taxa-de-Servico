@@ -10,11 +10,19 @@ Total por pessoa (conta + taxa)
 
 O layout é responsivo para dispositivos móveis e utiliza variáveis CSS para facilitar a personalização.
 
+
+<img width="797" height="601" alt="image" src="https://github.com/user-attachments/assets/6b4978fd-2373-42ca-8481-bfe03baa94a4" />
+
+
+
 Funcionalidades
 
 Cálculo dinâmico da porcentagem de taxa com base na qualidade do serviço (15%, 10%, 5% ou 1%).
 
 Divisão do valor da conta entre N pessoas, mostrando:
+
+<img width="653" height="837" alt="image" src="https://github.com/user-attachments/assets/e46b702c-1e0b-447d-a7e0-d786a52f4736" />
+
 
 Quanto cada um deve pagar apenas da conta.
 
